@@ -26,6 +26,7 @@ jobs:
         with:
           module-name: pro-patch-v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
           files: admin/ catalog/
+          license-file: LICENSE
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
