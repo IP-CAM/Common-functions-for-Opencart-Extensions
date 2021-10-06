@@ -22,7 +22,12 @@ class ModelExtensionProPatchSetting extends Model
 
         $setting = ($this->config->get($code)) ? $this->config->get($code) : array();
 
-        $setting_key = $this->getSettingKey($type, $code);
+        if (VERSION >= '3.0.0.0') {
+            $setting_key = "{$type}_{$code}";
+        } else {
+            $setting_key = $code;
+        }
+
         $store_setting = $this->model_setting_setting->getSetting($setting_key, $store_id);
 
         foreach ($store_setting as $k => $v) {
@@ -45,14 +50,5 @@ class ModelExtensionProPatchSetting extends Model
         }
 
         return false;
-    }
-
-    private function getSettingKey($type, $code)
-    {
-        if (VERSION >= '3.0.0.0') {
-            return "{$type}_{$code}";
-        } else {
-            $code;
-        }
     }
 }
