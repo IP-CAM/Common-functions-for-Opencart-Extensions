@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/brokeyourbike/pro-patch-opencart/compare/v1.0.1...v1.0.2) (2021-10-06)
+
+
+### Bug Fixes
+
+* playing around with functions ([ae307b4](https://www.github.com/brokeyourbike/pro-patch-opencart/commit/ae307b4171078760421937658f48a8923cef2eef))
+
 ### [1.0.1](https://www.github.com/brokeyourbike/pro-patch-opencart/compare/v1.0.0...v1.0.1) (2021-10-06)
 
 
